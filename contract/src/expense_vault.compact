@@ -1,0 +1,19 @@
+pragma language_version 0.23.0;
+
+import CompactStandardLibrary;
+
+export ledger foodExpenses: Counter;
+export ledger travelExpenses: Counter;
+export ledger educationExpenses: Counter;
+
+export circuit addFoodExpense(): [] {
+    foodExpenses.increment(1);
+}
+
+export circuit addTravelExpense(): [] {
+    travelExpenses.increment(1);
+}
+
+export circuit addEducationExpense(): [] {
+    educationExpenses.increment(1);
+}

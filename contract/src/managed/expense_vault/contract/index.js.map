@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "../../../../../",
+  "sources": ["contract/src/expense_vault.compact"],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAAA;;;;;;;;;;MAQA,AAAA,cAEC;;;;;;;;;;;;;;;;;;;;;;OAAA;MAED,AAAA,gBAEC;;;;;;;;;;;;;;;;;;;;;;OAAA;MAED,AAAA,mBAEC;;;;;;;;;;;;;;;;;;;;;;OAAA;;;;;;;;;;;;GAAC;EAlBF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAIA;;;;;;;;;yEAAoC;IACpC;;;;;;;;;yEAAsC;IACtC;;;;;;;;;yEAAyC;;;;;;;GAYvC;EAVF,AAAA,iBAEC;UADG,KAAY;IAAZ;;;;;;;;;;6FAAA,KAAY;;;;wEAAA;;GACf;EAED,AAAA,mBAEC;UADG,KAAc;IAAd;;;;;;;;;;6FAAA,KAAc;;;;wEAAA;;GACjB;EAED,AAAA,sBAEC;UADG,KAAiB;IAAjB;;;;;;;;;;6FAAA,KAAiB;;;;wEAAA;;GACpB;;;;;;;;;;;;;;;;IAdD;qCAAA;;;;;;;;;;;0GAAoC;KAAA;IACpC;qCAAA;;;;;;;;;;;0GAAsC;KAAA;IACtC;qCAAA;;;;;;;;;;;0GAAyC;KAAA;;;;;;;;;;"
+}
