@@ -1,58 +1,95 @@
-# Midnight Expense Vault
+## Proof of Deployment and On-Chain Interaction
 
-A privacy-focused Android DApp for tracking personal expenses on the Midnight network.
+### Wallet and Dust Registration
 
-Midnight Expense Vault allows users to record expenses across three categories — Food, Travel, and Education — using a Compact smart contract deployed on Midnight PreProd.
+The embedded wallet was successfully synchronized on Midnight PreProd and Dust was registered before deploying the contract.
 
-The application was built as an original Android DApp using the Kuira Android SDK and performs Compact contract deployment and circuit execution directly from the Android device.
+The wallet panel shows:
 
----
+- Network: Midnight PreProd
+- Proving: On-device
+- NIGHT balance: 5,000
+- Dust balance: 8,981.72
+- Dust registration completed successfully
 
-## Built on Midnight
-
-This project was built on the **Midnight network** using the **Kuira Android SDK** and **Compact smart contracts**.
-
-The application demonstrates:
-
-- Embedded Midnight wallet integration
-- Midnight PreProd network connectivity
-- On-device Compact contract deployment
-- On-device circuit execution
-- Dust registration and wallet synchronization
-- Reading on-chain ledger state
-- Android-native DApp development with Kotlin and Jetpack Compose
+![Midnight wallet synced and Dust registered](docs/screenshots/wallet-dust-registered.jpg)
 
 ---
 
-## Features
+### Contract Deployment and Circuit Execution
 
-### Expense Tracking
+The Expense Vault Compact contract was deployed from the Android DApp on Midnight PreProd.
 
-The application provides three expense categories:
+The application then executed the `addFoodExpense()` circuit successfully.
 
-- 🍔 Food
-- ✈️ Travel
-- 🎓 Education
+The resulting on-chain ledger state shown in the application is:
 
-Each category is backed by its own ledger value in the Compact smart contract.
+- Total Expenses: 1
+- Food: 1
+- Travel: 0
+- Education: 0
 
-### Midnight Integration
-
-- Midnight PreProd network
-- Embedded wallet
-- Dust registration
-- On-device proving
-- Compact smart contract deployment
-- On-chain circuit execution
-- Persistent contract address storage
+![Midnight Expense Vault deployed contract and successful circuit call](docs/screenshots/expense-vault-deployed.jpg)
 
 ---
 
-## How It Works
+## Deployed Contract
 
-The Compact contract maintains three expense counters:
+**Network:** Midnight PreProd
+
+**Contract Address:**
 
 ```text
-foodExpenses
-travelExpenses
-educationExpenses
+ec36717cf002dfe44d61253da7e102128ca91c64d60eba3ccdf017c7fbf70a92
+
+
+---
+
+# 3. I'd also add a nice visual demo near the top
+
+Your README currently starts with the project title and description.
+
+Right after the description, add:
+
+```markdown
+## 📱 Application Demo
+
+<p align="center">
+  <img src="docs/screenshots/expense-vault-deployed.jpg"
+       alt="Midnight Expense Vault Android DApp"
+       width="320">
+</p>
+
+<p align="center">
+  <b>Midnight Expense Vault running on Midnight PreProd</b>
+</p>
+
+## Architecture
+
+```text
+┌──────────────────────────────┐
+│      Android Application     │
+│      Kotlin + Compose        │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│       Kuira Android SDK      │
+│   Embedded Midnight Wallet   │
+└──────────────┬───────────────┘
+               │
+               │ Deploy / Call
+               ▼
+┌──────────────────────────────┐
+│       Midnight PreProd       │
+│                              │
+│   Expense Vault Contract     │
+│                              │
+│  foodExpenses                │
+│  travelExpenses              │
+│  educationExpenses           │
+└──────────────────────────────┘
+
+
+---
+
